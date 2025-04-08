@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css">
+    <title>LORENZO</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="icon" href="59-597959_free-icons-png-png-anime-hd-transparent-png.png" type="image/x-icon">
+    <link rel="stylesheet" href="/_next/static/css/e7b18d8fb976187c.css" data-precedence="next">
+</head>
+<body>
+    <section>
+        <video class="background-video" autoplay muted loop>
+            <source src="backgrunds\6c47e518-b9a9-4ba0-b544-f37faa242526.mp4" type="video/mp4">
+        </video>
+  
+    <nav>
+           
+        </div> 
+        <div class="social-links" data-aos="flip-down" data-aos-duration="1000" data-aos-delay="1000">
+            <a href="https://github.com/luisXdiv"><i class="fa-brands fa-github"></i></a>
+            <a href="https://www.instagram.com/ysnn_luis/"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://discord.gg/PTrnPeETXg"><i class="fa-brands fa-discord"></i></a>
+      
+        </div>
+      
+       
+    </nav>
+    <div class="main-container">
+        <div class="image" data-aos="zoom-in-right" data-aos-duration="2500">
+            <img src="photos\discord_fake_avatar_decorations_1744129089259.gif" alt="">
+        </div>
+        <div class="playlist-panel" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="1500">
+            <h2>Playlist<img src="https://github.com/WeansHHN/weanshhn.github.io/blob/main/img/gif/gifwaifu.gif?raw=true" alt="weanshhn" width="25" height="25" /></h2>
+            <ul id="music-playlist">
+                <img src="photos\g3.gif" alt="Album Cover" class="playlist-panelcaver"> 
+                <li class="play-song" data-src="sungs\Skit.mp3" data-title="Skit" data-artist="lmorphine">Skit - lmorphine</li>
+                <li class="play-song" data-src="sungs\2b343e4f-45e2-4fc2-a434-b2a6b467ee35.mp3" data-title="New Jeans " data-artist="Jiandro x Dxrkaii">New Jeans  - Jiandro x Dxrkaii</li>
+                <li class="play-song" data-src="sungs\Bibi Babydoll - OnlyFans (prod. d.silvestre) (Lyrics).mp3" data-title="OnlyFans" data-artist="Bibi Babydoll">OnlyFans - Bibi Babydoll</li>
+                <li class="play-song" data-src="sungs\Adams (ft. Raid).mp3" data-title="Adams" data-artist="lmorphine">Adams- lmorphine</li>
+                <li class="play-song" data-src="sungs\Lala Mimona.mp3" data-title="LALA MEMONA" data-artist="HHH">LALA MEMONA</li>
+            </ul>
+            <button id="toggle-playlist">Hide Playlist</button>
+        </div>
+        <div class="about-me-panel" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="1500">
+            <h2 class="auto-color-change">About Me<img src="https://github.com/WeansHHN/weanshhn.github.io/blob/main/img/gif/gifwaifu.gif?raw=true" alt="weanshhn" width="25" height="25" /></h2>
+            <p>
+                Hi, I'm LORENZO! I'm passionate about web development, design, and creating interactive user experiences. 
+                I enjoy working on creative projects and exploring new technologies.
+            </p>
+            <p>
+                Feel free to connect with me on my social media platforms or check out my projects on GitHub!<img src="https://github.com/WeansHHN/weanshhn.github.io/blob/main/img/gif/gifwaifu.gif?raw=true" alt="weanshhn" width="25" height="25" />
+            </p>
+        </div>
+        <div class="content">
+            <h1 data-aos="fade-left" data-aos-duration="1000" data-aos-delay="800">Hey I'm <span>LORENZO</span></h1>
+            <div class="typewriter" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="900">I'm a <span></span></div>
+            <p data-aos="flip-up" data-aos-duration="1000" data-aos-delay="1000"></p>
+            
+           
+             
+           
+            <div class="audio-player" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="1300">
+                <img src="photos\cb92b384-39f2-4390-a68c-96f5631e7144.webp" alt="Album Cover" class="album-cover"> 
+                <div class="music-info">
+                    <div class="song-title" id="current-song-title"> Skit</div>
+                    <div class="artist-name" id="current-artist-name">lmorphine</div>
+                </div>
+                <audio id="audio" autoplay src="sungs\Skit.mp3"></audio>
+                <div class="controls">
+                    <button id="play-pause" class="play"><i class="fas fa-play"></i></button>
+                    <input type="range" id="seek-bar" value="0">
+                    <span id="current-time">0:00</span> / <span id="duration">0:00</span>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init({offset:0});
+    </script>
+    <script>
+        function hamburg(){
+            const navbar = document.querySelector(".dropdown")
+            navbar.style.transform = "translateY(0px)"
+        }
+        function cancel(){
+            const navbar = document.querySelector(".dropdown")
+            navbar.style.transform = "translateY(-500px)"
+        }
+
+        const audio = document.getElementById('audio');
+        const playPauseButton = document.getElementById('play-pause');
+        const seekBar = document.getElementById('seek-bar');
+        const currentTimeElement = document.getElementById('current-time');
+        const durationElement = document.getElementById('duration');
+        const playSongButtons = document.querySelectorAll('.play-song');
+        const togglePlaylistButton = document.getElementById('toggle-playlist');
+        const musicPlaylist = document.getElementById('music-playlist');
+        const currentSongTitle = document.getElementById('current-song-title');
+        const currentArtistName = document.getElementById('current-artist-name');
+
+        playPauseButton.addEventListener('click', function () {
+            if (audio.paused) {
+                audio.play();
+                playPauseButton.innerHTML = '<i class="fas fa-pause"></i>';
+            } else {
+                audio.pause();
+                playPauseButton.innerHTML = '<i class="fas fa-play"></i>';
+            }
+        });
+
+        audio.addEventListener('timeupdate', function () {
+            const currentTime = audio.currentTime;
+            const duration = audio.duration;
+            seekBar.value = (currentTime / duration) * 100;
+            currentTimeElement.textContent = formatTime(currentTime);
+            durationElement.textContent = formatTime(duration);
+        });
+
+        seekBar.addEventListener('input', function () {
+            const seekTime = (seekBar.value / 100) * audio.duration;
+            audio.currentTime = seekTime;
+        });
+
+        playSongButtons.forEach(button => {
+            button.addEventListener('click', function () {
+                const songSrc = this.getAttribute('data-src');
+                const songTitle = this.getAttribute('data-title');
+                const artistName = this.getAttribute('data-artist');
+                audio.src = songSrc;
+                currentSongTitle.textContent = songTitle;
+                currentArtistName.textContent = artistName;
+                audio.play();
+                playPauseButton.innerHTML = '<i class="fas fa-pause"></i>';
+            });
+        });
+
+        togglePlaylistButton.addEventListener('click', function () {
+            if (musicPlaylist.style.display === 'none' || musicPlaylist.style.display === '') {
+                musicPlaylist.style.display = 'block';
+                togglePlaylistButton.textContent = 'Hide Playlist';
+            } else {
+                musicPlaylist.style.display = 'none';
+                togglePlaylistButton.textContent = 'Show Playlist';
+            }
+        });
+
+        function formatTime(seconds) {
+            const minutes = Math.floor(seconds / 60);
+            const secs = Math.floor(seconds % 60);
+            return `${minutes}:${secs < 10 ? '0' : ''}${secs}`;
+        }
+    </script>
+    <script id="_cursor" src="https://assets.guns.lol/cursor-effects.js"></script>
+    
+</body>
+</html>
